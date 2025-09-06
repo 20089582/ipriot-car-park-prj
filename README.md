@@ -1,15 +1,34 @@
-# North Metro Software Python Project Template
+# car parking prodject
 
-A Python project template for all new projects in North Metro Software
+## **description**
 
-You may use the guidelines under `org/` for assessments and projects in the IP4RIoT cluster.
+    Design and implement a Car Park System using Python. 
 
-## Additional Examples
-Here are other good examples of onboarding documents that relate to git and version control for you to browse:
+## **Goals**
 
-- [skybase](https://handbook.skybase.com.np/git-conventions/)
-- [thoughtbot](https://github.com/thoughtbot/guides/tree/main/git) (also see their excellent [code review](https://github.com/thoughtbot/guides/tree/main/code-review) guide!)
-- [GitLab Handbook](https://handbook.gitlab.com/handbook/product-development-flow/)
+the goals of the carpark
 
-# Note
-When using this repo as a template, you should update this readme to provide a general overview suitable for **YOUR** project.
+    CarPark stores location, capacity, plates
+
+    Sensors create diffrent sensors for the carpark
+    (Entry/Exit, scan plates, notifying CarPark)
+
+    Display shows status of the carpark (available bays, time, temp)
+
+## **commit message formating**
+Use Conventional Commits:
+
+    {type} : <commit message>
+
+types    
+    
+    feat: new features
+
+    fix: bug fix
+
+    test: add or update tests
+
+    chore: maintenance tasks
+
+## **prodject settings**
+    IDE: PyCharm
