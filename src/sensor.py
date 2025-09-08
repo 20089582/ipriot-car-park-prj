@@ -7,11 +7,7 @@ class Sensor:
     def __str__(self):
         status = "active" if self.is_active else "inactive"
         return f"Sensor id: {self.id}, Sensor status: {status}"
-
-
 class EntrySensor(Sensor):
     pass
-
-
 class ExitSensor(Sensor):
     pass
