@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 import random
-from car_park import CarPark
+
 class Sensor(ABC):
-    def __init__(self, id, is_active:bool, car_park:CarPark):
+    def __init__(self, id, is_active:bool, car_park):
         '''intialises variables'''
         self.id = id
         self.is_active = is_active

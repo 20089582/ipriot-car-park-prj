@@ -21,7 +21,7 @@ class CarPark:
         elif isinstance(component, Sensor):
             self.sensors.append(component)
         elif isinstance(component, Display):
-            self.sensors.append(component)
+            self.displays.append(component)
 
     def add_car(self, plate):
         '''adds car and updates display'''
@@ -32,6 +32,8 @@ class CarPark:
         if plate in self.plates:
             self.plates.remove(plate)
             self.update_displays()
+        else:
+            raise ValueError(f"Plate: {plate} not found")
     @property
     def available_bays(self):
         '''calculates avalible bays'''
