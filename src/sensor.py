@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 import random
-
+from car_park import CarPark
 class Sensor(ABC):
-    def __init__(self, id, is_active, car_park):
+    def __init__(self, id, is_active:bool, car_park:CarPark):
         '''intialises variables'''
         self.id = id
         self.is_active = is_active
@@ -27,13 +27,13 @@ class Sensor(ABC):
         self.update_car_park(plate)
 
 class EntrySensor(Sensor):
-    def update_car_park(self, plate):
+    def update_car_park(self, plate:str):
         '''adds the plate number to the car park'''
         self.car_park.add_car(plate)
         print(f"Incoming 🚘 vehicle detected. Plate: {plate}")
 
 class ExitSensor(Sensor):
-    def update_car_park(self, plate):
+    def update_car_park(self, plate:str):
         '''removes a plate number from the car park'''        
         self.car_park.remove_car(plate)
         print(f"Outgoing 🚗 vehicle detected. Plate: {plate}")

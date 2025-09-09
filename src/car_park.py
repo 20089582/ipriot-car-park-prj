@@ -2,12 +2,12 @@ from sensor import Sensor
 from display import Display
 
 class CarPark:
-    def __init__(self, location: str, capacity: int, plates: list = None, sensor = None , displays = None):
+    def __init__(self, location: str, capacity: int, plates: list = None, sensors: list[Sensor] = None , displays: list[Display] = None):
         '''intialises variables'''
         self.location = location
         self.capacity = capacity
         self.plates = plates or []
-        self.sensor = sensor or []
+        self.sensors = sensors or []
         self.displays = displays or []
         
     def __str__(self):
