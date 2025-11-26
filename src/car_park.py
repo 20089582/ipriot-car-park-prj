@@ -2,7 +2,7 @@ from sensor import Sensor
 from display import Display
 
 class CarPark:
-    def __init__(self, location: str, capacity: int, plates: list = None, sensors: list[Sensor] = None , displays: list[Display] = None):
+    def __init__(self, location: str, capacity: int, plates=None,sensors=None,displays=None):
         """initialises variables"""
         self.location = location
         self.capacity = capacity
@@ -27,6 +27,7 @@ class CarPark:
         """adds car and updates display"""
         self.plates.append(plate)
         self.update_displays()
+        
     def remove_car(self, plate):
         """removes car and updates display"""
         if plate in self.plates:
